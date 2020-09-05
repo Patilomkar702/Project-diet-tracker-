@@ -1,0 +1,14 @@
+.img1{
+  height: 70vh;
+  object-fit: cover;
+  background-position: center;
+  padding: 0px;
+}
+p{
+  size: 20px;
+}
+
+.blt{
+padding:10px;
+background-color: rgba(0,0,0,0.6);
+}

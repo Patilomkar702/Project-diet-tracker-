@@ -1,0 +1,73 @@
+<div class="container-fluid" style="background-image:url('assets/b5.jpg');background-position: center;">
+  <div class="row bg-dark sticky-top " style="height: 10vh">
+    <div class="col d-flex align-items-center text-light">
+      <img src="assets/p1.png" height="70px" class="ml-2">
+     Diet Tracker
+    </div>
+    <div class="text-light d-flex justify-content-center align-items-center h3">Welcome {{name}}</div>
+    <div class="col d-flex justify-content-end align-items-center">
+      <a class="text-light mr-3" routerLink="/home">Home</a>
+      <a class="text-light mr-3" routerLink="/home/education">
+      Videos
+      </a>
+      <a class="text-light mr-3" routerLink="/register">
+        Account
+        </a>
+      <a class="text-light mr-5" routerLink="/home/contact-us">
+      Contact Us
+      </a>
+
+      <button class="btn btn-outline-danger mr-1" (click)="processLogout()">
+        Log Out
+      </button>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center align-items-center">
+    <div>
+      <div class="jumbotron mt-3" style="border-radius: 5%;">
+        <h1 class="display-4">Hello, {{name}}</h1>
+
+        <div>
+          <h3>Remaining Calories</h3><h1>{{consume}}</h1>
+          <ng-template [ngIf]="consume<=0"><h4 class="text-danger">You are Eating Beyound Recommended Limit, You may gain Weight</h4></ng-template>
+        </div>
+        <p class="lead"> The Calorie Calculator can be used to estimate the number of calories a person needs to consume each day. </p>
+        <hr class="my-4">
+        <h6>Hi {{name}} you should Consume <h1>{{num()}}</h1> to maitain Weight of {{weight}} Kg
+          <div class="row justify-content-end align-items-center">
+            <button type="button" class="btn btn-danger btn pl-2 pr-2 mr-5" (click)="resetbtn()">Reset</button>
+            <button type="button" class="btn btn-secondary btn pl-2 pr-2 mr-5" (click)="diablebtn()">Add Consume Cal</button>
+          </div>
+        </h6>
+      </div>
+      <h1 [style.visibility]="err?'hidden':'visible'">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="card" style="width: 50vw; ">
+            <ul class="list-group list-group-flush" style="border-radius: 5%;">
+              <li class="list-group-item bg-dark text-light">
+                <div class="row justify-content-between pl-2 pr-2 m-0 pt-0 pb-0">
+                  <div><p> 2 Roti</p></div>
+                  <div><button type="button" class="btn btn-secondary btn-md" (click)="cusmcal('157')">Add</button></div>
+                </div>
+              </li>
+              <li class="list-group-item"> <div class="row justify-content-between pl-2 pr-2 m-0 pt-0 pb-0">
+                <div><p>1 bowl Salad</p></div>
+                <div><button type="button" class="btn btn-secondary btn-md" (click)="cusmcal('220')">Add</button></div>
+              </div></li>
+              <li class="list-group-item bg-dark text-light"> <div class="row justify-content-between pl-2 pr-2 m-0 pt-0 pb-0">
+                <div><p>1 cup Rice</p></div>
+                <div><button type="button" class="btn btn-secondary btn-md" (click)="cusmcal('460')">Add</button></div>
+              </div></li>
+            </ul>
+          </div>
+  
+        </div>
+      </h1>
+    
+    </div>
+  </div>
+  
+
+</div>
+

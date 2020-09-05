@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <div class="row sticky-top bg-danger" style="height: 10vh">
+        <div class="col d-flex align-items-center text-light">
+         <img src="assets/p1.png" height="70px" class="ml-2">
+         Diet Tracker
+        </div>
+        <div class="text-light d-flex justify-content-center align-items-center h3">Welcome {{value}}</div>
+        <div class="col d-flex justify-content-end align-items-center">
+          <a class="text-light mr-3" routerLink="/home/Diet_Tracker">Diet Tracker</a>
+          <a class="text-light mr-3" routerLink="/home/education">
+          Videos
+          </a>
+          <a class="text-light mr-3" routerLink="/register">
+            Account
+            </a>
+          <a class="text-light mr-5" routerLink="/home/contact-us">
+          Contact Us
+          </a>
+    
+          <button class="btn btn-outline-danger mr-1" (click)="processLogout()">
+            Log Out
+          </button>
+        </div>
+      </div>
+
+  <div class="row d-flex align-items-center justify-content-center" style="height: 100vh;">
+      <div class="col-6">
+          <div class="row d-flex align-items-center justify-content-center">
+              <div class="col-6 d-flex align-items-center justify-content-center" style="font-size: 200px;
+              color:#0f1727;
+              text-shadow:5px 5px 4px #6a6f79 ;
+              border-bottom:double rgb(160, 160, 160);
+              padding: 0px;
+              border-width:6px;
+              font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;">
+                  404
+              </div>
+          </div>
+          <div class="row d-flex align-items-center justify-content-center">
+              <div class="col-5 d-flex align-items-center justify-content-center pt-3 text-danger" style="font-size: 30px;
+            
+              text-shadow:1px 1px 1px ;
+              font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;">
+                  Page Not Found..!!!
+              </div>
+          </div>
+          <div class="row d-flex align-items-center justify-content-center pt-5">
+              <div class="col-3 btn btn-block btn-outline-danger mb-5"
+                  style="border-style:outset;border-radius: 10px;border-width:3px;" routerLink="/home">
+                  Back To Home Page
+              </div>
+          </div>
+      </div>
+  </div>
+
+</div>
+

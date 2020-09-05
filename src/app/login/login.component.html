@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="row" style="height: 100vh">
+    <!-- Left Block -->
+    <div
+      class="col-12 col-md-6 bg-dark d-flex flex-column justify-content-center align-items-center" style="background-image: url(assets/b3.jpg); object-fit: cover; background-position: center; background-repeat: no-repeat;"
+    >
+      
+    <div style="background-color: rgba(0,0,0,0.6);" class="d-flex align-items-center justify-content-center rounded">
+      <h3 class="text-light p-4">
+        When diet is wrong, medicine is of no use
+      </h3>
+    </div>
+    </div>
+
+    <!-- Right Block-->
+    <div
+      class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center bg-dark text-light"
+      [formGroup]="fbFormGroup"
+    >
+      <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+        Something Went Wrong...Please Enter Valid Email address
+      </div>
+
+      <div class="h4">Application Login</div>
+
+      <div>
+        <input
+          type="text"
+          placeholder="Enter Username"
+          class="form-control mt-3"
+          formControlName="name"
+        />
+      </div>
+
+      <div class="mt-3">
+        <input
+          type="password"
+          placeholder="Enter Password"
+          class="form-control"
+          formControlName="password"
+        />
+      </div>
+
+      <button
+        class="btn btn-secondary btn-lg  mt-4 mb-2"
+        [disabled]="!fbFormGroup.valid"
+        (click)="loginProcessHere()"
+      >
+        Login Here
+      </button>
+
+      <a routerLink="/register" class="mt-3">Register Here</a>
+      <a routerLink="/forgot" class="mt-3">Forget Password</a>
+      <div>
+        <img src="assets/b3.gif">
+      </div>
+    </div>
+  </div>
+</div>
